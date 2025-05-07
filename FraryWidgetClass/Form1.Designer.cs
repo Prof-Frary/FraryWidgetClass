@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtName = new TextBox();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox2 = new TextBox();
+            txtPrice = new TextBox();
             cboColor = new ComboBox();
             cboSize = new ComboBox();
             btnAdd = new Button();
+            lstOut = new ListBox();
             SuspendLayout();
             // 
             // label1
@@ -48,12 +49,12 @@
             label1.TabIndex = 0;
             label1.Text = "Name";
             // 
-            // textBox1
+            // txtName
             // 
-            textBox1.Location = new Point(144, 77);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 1;
+            txtName.Location = new Point(144, 77);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(100, 23);
+            txtName.TabIndex = 1;
             // 
             // label2
             // 
@@ -82,12 +83,12 @@
             label4.TabIndex = 4;
             label4.Text = "Price";
             // 
-            // textBox2
+            // txtPrice
             // 
-            textBox2.Location = new Point(144, 201);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 5;
+            txtPrice.Location = new Point(144, 201);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(100, 23);
+            txtPrice.TabIndex = 5;
             // 
             // cboColor
             // 
@@ -107,27 +108,38 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(144, 301);
+            btnAdd.Location = new Point(144, 250);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(75, 47);
             btnAdd.TabIndex = 8;
             btnAdd.Text = "Add Widget";
             btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += button1_Click;
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // lstOut
+            // 
+            lstOut.FormattingEnabled = true;
+            lstOut.HorizontalScrollbar = true;
+            lstOut.ItemHeight = 15;
+            lstOut.Location = new Point(12, 333);
+            lstOut.Name = "lstOut";
+            lstOut.Size = new Size(330, 94);
+            lstOut.TabIndex = 9;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(379, 450);
+            Controls.Add(lstOut);
             Controls.Add(btnAdd);
             Controls.Add(cboSize);
             Controls.Add(cboColor);
-            Controls.Add(textBox2);
+            Controls.Add(txtPrice);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtName);
             Controls.Add(label1);
             Name = "Form1";
             Text = "Widget Entry - Your Name";
@@ -139,13 +151,14 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtName;
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox2;
+        private TextBox txtPrice;
         private ComboBox cboColor;
         private ComboBox cboSize;
         private Button btnAdd;
+        private ListBox lstOut;
     }
 }

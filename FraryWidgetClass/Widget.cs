@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.Design;
 
 namespace FraryWidgetClass
 {
@@ -43,5 +44,13 @@ namespace FraryWidgetClass
             WidgetColor = c;
             WidgetPrice = p;
         }
+
+        public override string ToString()
+        {
+            return ("The widget name is " + WidgetName + 
+                " the widget size " + WidgetSize +
+                " the widget color " + WidgetColor +
+                " the widget price " + WidgetPrice.ToString("C") );
+        } 
     }
 }

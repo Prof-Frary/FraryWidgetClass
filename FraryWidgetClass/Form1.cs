@@ -22,9 +22,18 @@ namespace FraryWidgetClass
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            // no error checking
+            Widget w = new Widget(txtName.Text, 
+                cboSize.Text,
+                cboColor.Text,
+                double.Parse(txtPrice.Text));
+            lstOut.Items.Add(w);
+            lstOut.Items.Add(w.WidgetName);
+            lstOut.Items.Add(w.WidgetColor);
+            lstOut.Items.Add(w.WidgetSize);
+            lstOut.Items.Add(w.WidgetPrice);
         }
     }
 }
